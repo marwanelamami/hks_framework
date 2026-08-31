@@ -1,0 +1,82 @@
+Salam everyone 👋
+
+Welcome to the HkS Security & AI Lab | 2026.
+
+Congratulations again on joining the HkS Internship Programme.
+
+The objective of this programme is not simply to complete training exercises. You will be working towards building a practical HkS Security, Governance & Compliance Framework that can be applied across different organisations, systems, cloud environments and technology platforms.
+
+Throughout the programme, we will explore areas including:
+
+• Cybersecurity & Security Engineering
+• Governance, Risk & Compliance (GRC)
+• ISO 27001 & SOC 2
+• Security policies and controls
+• Risk management
+• Application & API Security
+• Cloud Security
+• Identity & Access Management
+• DevSecOps and Secure SDLC
+• Vulnerability Management
+• Security Monitoring & Incident Response
+• Business Continuity & Disaster Recovery
+• Data Protection & Privacy
+• Third-Party & Supplier Risk
+• GRC-as-Code and automated evidence collection
+• AI Security & AI Governance
+
+Our longer-term objective is to understand how these areas can be brought together into a modern, reusable security and compliance framework, with automation and AI incorporated wherever they genuinely add value.
+
+First Assignment
+
+For your first individual assignment, I would like each of you to research ISO 27001 and SOC 2.
+
+Prepare a short document covering:
+
+1. What is ISO 27001?
+2. What is SOC 2?
+3. What are the main differences between them?
+4. What is an Information Security Management System (ISMS)?
+5. What is a security control?
+6. What is compliance evidence and why is it important?
+7. Select 5 security controls that you believe should form part of a modern organisation's security framework.
+
+For each control explain:
+
+Risk → Control → Implementation → Evidence → Testing → Automation
+
+For example:
+
+What risk are we protecting against?
+
+What control should exist?
+
+How could the organisation implement it?
+
+How do we prove that it is implemented and operating correctly?
+
+How could we continuously test it?
+
+Could the control or evidence collection be automated?
+
+Finally, I want each of you to propose one idea where AI could improve cybersecurity, governance, risk or compliance.
+
+Use of AI 🤖
+
+You are encouraged to use AI tools throughout the internship.
+
+However, AI should help you research, analyse, challenge and accelerate your work — not replace your understanding.
+
+Anything you submit, you should be capable of explaining and defending.
+
+If AI gives you an answer, verify it.
+
+If you disagree with it, challenge it.
+
+If you find a better approach, explain why.
+
+This is an engineering and research environment, so I'm interested not only in the final answer but also in how you think and how you arrived at it.
+
+We will review the first assignment together and use it as the foundation for the next stage of the programme.
+
+Welcome to HkS. Looking forward to building something valuable together. 🚀

@@ -1,0 +1,1282 @@
+DC Section 200
+
+
+2018 Description Criteria for
+a Description of a Service
+Organization’s System in a
+SOC 2® Report (with Revised
+Implementation Guidance – 2022)
+
+
+
+
+ i Main title here: Subhead title goes here
+DC Section 200
+
+2018 Description Criteria for a Description of a Service Organization’s System in
+a SOC 2® Report (With Revised Implementation Guidance — 2022)
+       Prepared by the AICPA Assurance Services Executive Committee’s SOC 2 Working Group
+
+Notice to Readers
+           The 2018 Description Criteria for a Description of a Service Organization’s System in a SOC 2® Report
+           (With Revised Implementation Guidance — 2022) (2018 description criteria) presents description criteria
+           established by the Assurance Services Executive Committee (ASEC) of the AICPA for use by service
+           organization management when preparing the description of the service organization’s system and by
+           the service auditors when evaluating whether the description is presented in accordance with the descrip-
+           tion criteria in a SOC 2 examination.
+
+           In developing and establishing these criteria, ASEC followed due process procedures, including expo-
+           sure of criteria for public comment. BL section 360R, Implementing Resolutions Under Section 3.6
+           Committees, fn 1 designates ASEC as a senior technical committee with the authority to make public
+           statements without clearance from the AICPA Council or the board of directors. Paragraph .A46 of AT-
+           C section 105, Concepts Common to All Attestation Engagements, fn 2 indicates that criteria promulgated
+           by a body designated by the Council of the AICPA under the AICPA Code of Professional Conduct are,
+           by definition, considered suitable.
+
+
+
+           Revisions in This Version
+
+           This version of the 2018 description criteria has been modified to reflect revisions to the implementation
+           guidance relevant to certain of the description criteria. As discussed in the introduction section, imple-
+           mentation guidance presents important factors to consider when making judgments about the nature and
+           extent of disclosures called for by each criterion.
+
+           The revisions to the implementation guidance discussed in this notice to readers do not in any way
+           alter the criteria in the 2018 description criteria. Such criteria continue to be suitable criteria for
+           use when evaluating the description of a system in a SOC 2 engagement.
+
+
+
+
+fn 1
+       All BL sections can be found in AICPA Professional Standards.
+fn 2
+       All AT-C sections can be found in AICPA Professional Standards.
+
+
+                                                              Page 1
+         Revisions to the implementation guidance were developed by ASEC’s SOC 2 Working Group; all were
+         reviewed by the ASEC chair. The revised implementation guidance in this version is intended to provide
+         users of the criteria with the following:
+
+             •    Additional clarity regarding certain disclosure requirements
+
+             •    Guidance on disclosure of how controls meet the requirements of a process or control framework
+
+             •    Guidance on disclosure of information about the risk assessment process and specific risks
+
+Introduction
+.01      The AICPA’s Assurance Services Executive Committee (ASEC), through its Trust Information Integrity
+         Task Force’s SOC 2 Working Group, has developed a set of benchmarks, known as description criteria,
+         to be used when preparing and evaluating the description of the service organization’s system (descrip-
+         tion) in an examination of a service organization’s controls over security, availability, processing integ-
+         rity, confidentiality, or privacy (SOC 2 examination). This document presents the description criteria for
+         use in that examination. (This document does not address the AICPA’s trust services criteria, fn 3 which
+         are used in a SOC 2 examination to evaluate whether controls stated in the description were suitably de-
+         signed and operated effectively to provide reasonable assurance that the service organization’s service
+         commitments and system requirements were achieved based on the applicable trust services criteria.)
+
+.02      Applying the description criteria requires judgment. Therefore, in addition to the description criteria, this
+         document also presents implementation guidance for each criterion. The implementation guidance pre-
+         sents factors to consider when making judgments about the nature and extent of disclosures called for by
+         each criterion. This guidance does not address all possible situations; therefore, users should carefully
+         consider the facts and circumstances of the service organization and its environment when applying the
+         description criteria.
+
+
+
+Applicability and Use of the Description Criteria
+SOC 2 Examination
+
+.03      The description criteria presented in this document were developed to be used in conjunction with the
+         SOC 2 examination described in the AICPA Guide SOC 2© Reporting on an Examination of Controls at
+         a Service Organization Relevant to Security, Availability, Processing Integrity, Confidentiality, or Pri-
+         vacy (guide). The SOC 2 examination is performed in accordance with AT-C section 105, Concepts
+         Common to All Attestation Engagements, and AT-C section 205, Assertion-Based Examination
+
+
+
+fn 3
+    The 2017 Trust Services Criteria for Security, Availability, Processing Integrity, Confidentiality, and Privacy (With Revised
+Points of Focus — 2022) are codified in TSP section 100 in AICPA Trust Services Criteria.
+
+
+
+
+                                                               Page 2
+           Engagements. In that examination, the CPA (known as a service auditor) fn 4 expresses an opinion about
+           the following:
+
+               a. Whether the description is presented in accordance with the description criteria
+
+               b. Whether the controls were suitably designed to provide reasonable assurance that the service or-
+                  ganization’s service commitments and system requirements would be achieved if controls oper-
+                  ated effectively based on the applicable trust services criteria
+
+               c. In a type 2 examination, fn 5 whether the controls operated effectively to provide reasonable assur-
+                  ance that the service organization’s service commitments and system requirements were
+                  achieved based on the applicable trust services criteria fn 6
+
+.04        A SOC 2 examination is predicated on the concept that, because service organization management is
+           ultimately responsible for developing, implementing, and operating the service organization’s system,
+           service organization management is also responsible for developing and presenting in the SOC 2 report
+           a description of the service organization’s system. Service organization management uses the descrip-
+           tion criteria in this document when preparing the description of the service organization’s system; the
+           service auditor uses the criteria when evaluating whether the description is presented in accordance with
+           the description criteria.
+
+Suitability and Availability of the Description Criteria
+.05        The attestation standards define the attributes of suitable criteria for an examination engagement. In a
+           SOC 2 examination, the attributes of suitable criteria are as follows: fn 7
+
+
+
+
+fn 4
+    In the attestation standards, a CPA performing an attestation engagement ordinarily is referred to as a practitioner. However,
+AICPA Guide SOC 2® Reporting on an Examination of Controls at a Service Organization Relevant to Security, Availability, Pro-
+cessing Integrity, Confidentiality, or Privacy uses the term service auditor, rather than practitioner, to refer to a CPA reporting on
+controls at a service organization. Therefore, this document also uses the term service auditor.
+fn 5
+     There are two types of SOC 2 examinations (type 1 and type 2), and the subject matters vary depending on which type of exami-
+nation the service auditor performs. The subject matters of a type 1 examination are (a) the description and (b) the suitability of the
+design of the controls to provide reasonable assurance that the service organization’s service commitments and system requirements
+would be achieved based on the applicable trust services criteria. The subject matters in a type 2 examination are (a) the description,
+(b) the suitability of design of the controls to provide reasonable assurance that the service organization’s service commitments and
+system requirements would be achieved based on the applicable trust services criteria, and (c) the operating effectiveness of controls
+to provide reasonable assurance that the service organization’s service commitments and system requirements were achieved based on
+the applicable trust services criteria.
+fn 6
+     This term refers to the trust services criteria in TSP section 100, 2017 Trust Services Criteria for Security, Availability, Pro-
+cessing Integrity, Confidentiality, and Privacy (With Revised Points of Focus — 2022), that pertain to the category or categories in-
+cluded within the scope of the particular examination.
+fn 7
+       Paragraph .A44 of AT-C section 105, Concepts Common to All Attestation Engagements.
+
+
+                                                                Page 3
+               •   Relevance. Criteria are relevant to the system.
+
+               •   Objectivity. Criteria are free from bias.
+
+               •   Measurability. Criteria permit reasonably consistent measurements, qualitative or quantitative, of
+                   the system.
+
+               •   Completeness. Criteria are complete when the description prepared in accordance with them does
+                   not omit relevant factors that could reasonably be expected to affect users’ decisions made on the
+                   basis of that description.
+
+.06        In addition to being suitable, AT-C section 105 fn 8 indicates that the criteria used in an attestation en-
+           gagement should be available to report users. The publication of the description criteria makes the crite-
+           ria available to report users. Accordingly, ASEC has concluded that the description criteria presented in
+           this document are suitable and available for use in a SOC 2 examination.
+
+Preparing and Evaluating the Presentation of the Description of the Service Organiza-
+tion’s System in Accordance With the Description Criteria
+.07        Service organization management is responsible for the design, implementation, and operation of con-
+           trols within the system used to provide services to user entities and business partners. In a SOC 2 exami-
+           nation, a description of the service organization’s system presented in accordance with the description
+           criteria is designed to enable user entities, business partners, and other intended users of the SOC 2 re-
+           port (known collectively as report users) to understand the service organization’s system, including the
+           processing and flow of data and information through and from the system. The description describes the
+           procedures and controls the service organization has implemented to manage the risks that threaten the
+           achievement of the service organization’s service commitments and system requirements. The descrip-
+           tion is prepared by service organization management from documentation supporting the system of in-
+           ternal control and system operations, as well as consideration of the policies, processes, and procedures
+           within the system used to provide the services.
+
+.08        A SOC 2 report is intended for use by those who have sufficient knowledge and understanding of the
+           service organization, the services it provides, and the system used to provide those services, among other
+           matters. As a result, when drafting the description, service organization management can assume that
+           users have such knowledge and understanding. Furthermore, if the users do not have such knowledge
+           and understanding, they are likely to misunderstand the content of the SOC 2 report, the assertions made
+           by management, and the service auditor’s opinion, all of which are included in the report. For that rea-
+           son, management and the service auditor should agree on the intended users of the report (referred to as
+           specified parties). Specified parties of a SOC 2 report may include service organization personnel, user
+           entities of the system throughout some or all of the period, business partners subject to risks arising from
+
+
+
+fn 8
+       Paragraph .27b of AT-C section 105.
+
+
+
+
+                                                           Page 4
+      interactions with the system, practitioners providing services to user entities and business partners, pro-
+      spective user entities and business partners, and regulators who have sufficient knowledge and under-
+      standing of such matters.
+
+.09   Though the description is generally narrative in nature, there is no prescribed format for the description.
+      the description Service organization management may organize the description in a variety of different
+      ways, provided that disclosures called for by these criteria are included. For example, the description
+      may be organized by components of internal control (the control environment, risk assessment process,
+      control activities, monitoring activities, and information and communications). Alternatively, it may be
+      organized by components of the system (infrastructure, software, people, procedures, and data). Man-
+      agement may also use other logical groupings of information in organizing its system description, in-
+      cluding the use of recognized industry frameworks or standards based on management’s objectives. For
+      example, the system description may be organized by control families or control objectives listed in a
+      process or control framework.
+
+.10   Regardless of the method used to organize the system description, it is supplemented by disclosures of
+      the aspects of the internal control components relevant to the identification and assessment of risks that
+      would prevent the service organization from achieving its service commitments and system require-
+      ments and by disclosures of the design, implementation, and operation of controls to address those risks.
+      Although not required, it is good practice to map the controls listed back to the relevant criteria in each
+      of the trust services categories to more clearly demonstrate how the service organization's service com-
+      mitments and system requirements were achieved based on the applicable trust services criteria.
+      Flowcharts, matrixes, tables, graphics, context diagrams, or a combination thereof may be used to sup-
+      plement the narratives contained within the description.
+
+.11   The extent of disclosures included in the description may vary depending on the size and complexity of
+      the service organization and its activities. In addition, the description need not address every aspect of
+      the service organization’s system or the services provided by the system. For example, although the ser-
+      vice organization may use both manual and automated systems to provide services to user entities, the
+      description need not necessarily disclose every step in that process. Furthermore, if certain aspects of
+      those services are not relevant to report users or are beyond the scope of the SOC 2 examination, the de-
+      scription need not address them. For example, disclosures about a service organization’s processes re-
+      lated to billing for services provided to user entities are unlikely to be relevant to report users.
+
+.12   Ordinarily, a description of a service organization’s system in a SOC 2 examination is presented in ac-
+      cordance with the description criteria when it (a) describes the system that the service organization has
+      implemented (that is, placed in operation) to provide the services, (b) includes information about each
+      description criterion, to the extent it is relevant to the system being described, and (c) does not inadvert-
+      ently or intentionally omit or distort information that is likely to be relevant to report users’ decisions.
+      The description should be prepared at a level of detail that balances the need of report users to under-
+      stand the nature of the risks faced by the service organization, and the impact of the realization of those
+      risks, with the possibility of a hostile party using that information to identify potential vulnerabilities of
+      the system, thereby compromising the service organization’s ability to achieve its service commitments
+      and system requirements. Nevertheless, the description should include disclosures about each descrip-
+      tion criterion at a level that does not omit information that would be considered significant by report us-
+      ers.
+
+
+                                                      Page 5
+.13   A description is not presented in accordance with the description criteria if it (a) states or implies that
+      certain IT components exist when they do not, (b) states or implies that certain processes and controls
+      have been implemented when they are not being performed, or (c) contains statements that cannot be
+      objectively evaluated (for example, advertising puffery).
+
+.14   In certain circumstances, additional disclosures may be necessary to supplement the description. Man-
+      agement’s decisions about whether such additional disclosures are necessary and the service auditor’s
+      evaluation of management’s decisions involve consideration of whether the disclosures may affect infor-
+      mation that is likely to be relevant to the decisions of report users. Additional disclosures that may be
+      necessary include the following:
+
+         •   Significant interpretations made in applying the description criteria in the specific circumstances
+             of the SOC 2 examination (for example, what constitutes a security event or incident)
+
+         •   Subsequent events, depending on their nature and significance
+
+
+
+Materiality Considerations When Preparing and Evaluating Whether the Description Is
+Presented in Accordance With the Description Criteria
+.15   As discussed in paragraph .02, applying the description criteria requires judgment. One of those judg-
+      ments involves the informational needs of report users. Most SOC 2 reports have a broad range of speci-
+      fied parties. Therefore, the description is intended to meet the common informational needs of the speci-
+      fied parties and does not ordinarily include information about every aspect of the system that may be
+      considered important to each individual report user. However, an understanding of the perspectives and
+      information needs of the broad range of intended SOC 2 report users is necessary to determine whether
+      the description is presented in accordance with the description criteria and is sufficient to meet report
+      users’ needs.
+
+.16   When evaluating whether the description is in accordance with the description criteria, management
+      considers whether there is substantial likelihood that misstatements or omissions in the description, indi-
+      vidually or in the aggregate, would influence the judgments made by specified parties to the SOC 2 re-
+      port. For example, in a SOC 2 examination on controls relevant to privacy, management may discover
+      that it has failed to describe a principal service commitment involving compliance with the European
+      Union’s General Data Protection Regulation (GDPR) when compliance is required by law. Because
+      there is substantial likelihood that such information would influence the judgments made by SOC 2 re-
+      port users, management may conclude that the omission of such information may affect the decisions of
+
+
+
+
+                                                     Page 6
+         such users. In that case, management would amend the description by including the relevant infor-
+         mation. fn 9
+
+.17      Because the description criteria call for disclosure of primarily nonfinancial information, most descrip-
+         tions will be presented in narrative form. Therefore, materiality considerations are mainly qualitative in
+         nature and center around whether there are misstatements in information that have a substantial likeli-
+         hood of influencing the judgments made by report users, including the possibility that relevant infor-
+         mation has been omitted. Qualitative factors to be considered include the following:
+
+             •    The interaction between and relative importance of individual disclosures within the description.
+
+             •    The wording used to make required disclosures; for example, the wording chosen does not omit
+                  or distort the disclosures presented.
+
+             •    Whether the characteristics of the presentation are appropriate because the description criteria
+                  allow for variations in presentation.
+
+             •    The extent to which identified deficiencies in the suitability of design or the operating effective-
+                  ness of controls contradict the disclosures about controls included in the description.
+
+             •    The effect of a misstatement or potential misstatement on the description as a whole.
+
+             •    Whether a misstatement affects compliance with laws or regulations.
+
+Description Criteria for a Description of a Service Organization’s System in a SOC 2 Ex-
+amination and Related Implementation Guidance
+.18      To be presented in accordance with the description criteria, a description ordinarily needs to disclose
+         information about each of the requirements (criteria) presented in the left column of the following table,
+         to the extent that the criterion is applicable to the system and the trust services categories included
+         within the scope of the examination. (Materiality considerations are discussed in the previous section
+         beginning at paragraph .15.)
+
+.19      The implementation guidance in the right column of the following table presents factors to consider
+         when making judgments about the nature and extent of disclosures called for by each criterion. The im-
+         plementation guidance does not address all possible situations; therefore, service organization manage-
+         ment is advised to carefully consider the specific facts and circumstances of the service organization and
+
+
+
+
+fn 9
+     If the description has been prepared to meet the informational needs of a specific subset of SOC 2 report users (and the report is
+restricted to those specific users), management considers whether there is a substantial likelihood that misstatements (including omis-
+sions) would influence the judgments made by that specific subset of report users.
+
+
+
+
+                                                                Page 7
+the nature of the services provided when applying the description criteria in a SOC 2 examination. Illus-
+trative disclosures can be found on the AICPA website.
+
+
+
+
+                                             Page 8
+                 Description Criteria fn 10                                                                Implementation Guidance
+  The description contains the following infor-                   When making judgments about the nature and extent of disclosures to include about this cri-
+  mation:                                                         terion, consider the following:
+  DC1: The types of services provided                             Examples of the types of services provided by service organizations are as follows:
+
+                                                                     •    Customer support. Providing customers of user entities with online or telephonic post-
+                                                                          sales support and service management. Examples of these services are warranty inquir-
+                                                                          ies and investigating and responding to customer complaints.
+
+                                                                     •    Health care claims management and processing. Providing medical providers, em-
+                                                                          ployers, third-party administrators, and insured parties of employers with systems that
+                                                                          enable medical records and related health insurance claims to be processed accurately,
+                                                                          securely, and confidentially.
+
+                                                                     •    Enterprise IT outsourcing services. Managing, operating, and maintaining user enti-
+                                                                          ties’ IT data centers, infrastructure, and application systems and related functions that
+                                                                          support IT activities, such as network, production, security, change management, hard-
+                                                                          ware, and environmental control activities.
+
+                                                                     •    Managed security. Managing access to networks and computing systems for user enti-
+                                                                          ties (for example, granting access to a system and preventing, or detecting and mitigat-
+                                                                          ing, system intrusion).
+
+
+
+
+fn 10
+     In addition to the numbered criteria, the discussion in paragraphs 1–19 is relevant when implementing the criteria in preparing a description or evaluating whether the descrip-
+tion is presented in accordance with the description criteria.
+
+
+
+
+                                                                                      Page 9
+            Description Criteria fn 10                                              Implementation Guidance
+                                                    •   Financial technology services. Providing financial services companies with IT-based
+                                                        transaction processing services. Examples of such transactions are loan processing,
+                                                        peer-to-peer lending, payment processing, retirement recordkeeping, crowdfunding,
+                                                        big data analytics, and investment management.
+
+                                                    •   Environmental, social, and governance (ESG) metric services. Measuring, calculating,
+                                                        and otherwise assisting companies with gathering and reporting their ESG metrics.
+
+                                                  To be useful to report users, the description should clearly identify the services that are the
+                                                  focus of the SOC 2 examination.
+
+                                                  When handling personal information, a service organization may function in the role of a
+                                                  data processor, data controller, or both. Depending on which of these roles the service organi-
+                                                  zation performs, its responsibilities with regard to protecting personal information may dif-
+                                                  fer. Therefore, when the SOC 2 examination addresses privacy, clear disclosure of the role or
+                                                  roles performed by the service organization may be necessary to describe the types of ser-
+                                                  vices provided. Such disclosures enable users to understand how the service organization ad-
+                                                  dressed its responsibilities to mitigate risks to the achievement of its service commitments
+                                                  and system requirements related to privacy.
+
+DC2: The principal service commitments and sys-   A service organization adopts a mission and vision, sets strategies, and establishes objectives
+tem requirements                                  to help it meet its mission and vision based on its strategies. Management designs and imple-
+                                                  ments individual systems to achieve specific objectives and designs and implements controls
+                                                  within the system to mitigate the risks that threaten the service organization’s achievement of
+                                                  those objectives. The service organization’s objectives for its services and the system used to
+                                                  deliver those services are embodied in the service commitments it makes to user entities and
+                                                  the requirements it establishes for the functioning of the system used to deliver those services
+                                                  (service commitments and system requirements). Disclosure of the principal service commit-
+                                                  ments and system requirements enables report users to understand the objectives that drive
+                                                  the operation of the system and how the applicable trust services criteria were used to
+
+
+
+                                                                  Page 10
+Description Criteria fn 10                                    Implementation Guidance
+                             evaluate whether controls were suitably designed and operated effectively. Service commit-
+                             ments and system requirements relate primarily to the following:
+                               a. The achievement of the service commitments made to user entities related to the sys-
+                                  tem used to provide the services and the system requirements necessary to achieve
+                                  those commitments
+                               b. Compliance with laws and regulations regarding the provision of the services by the
+                                  system
+                               c. The achievement of the other objectives the service organization has for the system,
+                                  including those relating to implementation of controls to meet the requirements of a
+                                  process or control framework (For example, a service organization that does business
+                                  with government agencies may make a commitment to implement controls to meet the
+                                  requirements of the National Institute of Standards and Technology [NIST] Cybersecu-
+                                  rity Framework.)
+                             The service commitments and system requirements made by the service organization influ-
+                             ence which trust services categories the service organization selects for the SOC 2 examina-
+                             tion. For example, a cloud service provider may choose to include the availability category
+                             because of its importance to a broad range of users. Users may find a brief discussion of how
+                             the principal service commitments and system requirements relate to the categories selected
+                             for the examination useful..
+
+
+                             Service commitments. Service commitments may be communicated to user entities in many
+                             ways, such as through contracts, service-level agreements, and published policies (for exam-
+                             ple, a privacy policy). No specific form of communication is required.
+                             A service organization may make service commitments on many different aspects of the ser-
+                             vice being described, including the following:
+
+                              •   Specification of the algorithm used in a calculation
+
+
+
+
+                                            Page 11
+Description Criteria fn 10                                    Implementation Guidance
+                              •   The hours a system will be available
+
+                              •   Published password standards
+
+                              •   Encryption standards used to encrypt stored customer data
+
+                             Service commitments may also be made about one or more of the trust services categories
+                             addressed by the description. As an example, if controls over privacy are addressed by the
+                             description, a service organization may make commitments such as the following:
+
+                              •   The organization will not process or transfer information without obtaining the data
+                                  subject’s consent.
+
+                              •   The organization will provide a privacy notice to customers once every six months or
+                                  when there is a change in the organization’s business policies.
+
+                              •   The organization will respond to access requests within 10 working days of receiving
+                                  the request from its customers.
+
+                             System requirements. System requirements are the specifications about how the system
+                             should function to do the following:
+
+                              •   Meet the service organization’s service commitments to user entities and others (such as
+                                  user entities’ customers)
+
+                              •   Meet the service organization’s commitments to vendors and business partners
+
+                              •   Support compliance with relevant laws, regulations, and guidelines of industry groups,
+                                  such as business or trade associations
+
+
+
+
+                                            Page 12
+Description Criteria fn 10                                    Implementation Guidance
+                              •   Achieve other objectives of the service organization that are relevant to the trust ser-
+                                  vices categories addressed by the description, including those relating to implementa-
+                                  tion of controls to meet the requirements of a process or control framework
+
+                             System requirements are often specified in the service organization’s system policies and
+                             procedures, system design documentation, contracts with customers, and government regula-
+                             tions. The following are examples of system requirements:
+
+                              •   Workforce member fingerprinting and background checks established in government
+                                  banking regulations
+
+                              •   System edits that restrict the values accepted for system input, which are defined in ap-
+                                  plication design documents
+
+                              •   Maximum acceptable intervals between periodic review of workforce member logical
+                                  access as documented in the security policy manual
+
+                              •   Data definition and tagging standards, including any associated metadata requirements,
+                                  established by industry groups or other bodies, such as the Simple Object Access Proto-
+                                  col (SOAP)
+
+                              •   Business processing rules and standards established by regulators, for example, security
+                                  requirements under the Health Insurance Portability and Accountability Act (HIPAA)
+
+                              •   Programmatic enforcement of segregation of duties between data entry and data ap-
+                                  proval that creates system requirements regarding user access administration
+
+                             Determining principal service commitments and system requirements. Although service
+                             organization management is responsible for designing, implementing, and operating controls
+                             to provide reasonable assurance that it achieves its service commitments and system require-
+                             ments, management is required to disclose in the description only its principal service com-
+                             mitments and principal system requirements.
+
+
+                                             Page 13
+            Description Criteria fn 10                                              Implementation Guidance
+                                                 Principal service commitments are those that support the understanding of the services pro-
+                                                 vided, the system, and the design and operation of controls by a broad range of SOC 2 report
+                                                 users.
+
+                                                  •   When a service organization makes the same system availability commitment to the ma-
+                                                      jority of its user entities, it is likely that management would disclose such commitments
+                                                      in the description because such information would support the understanding of a broad
+                                                      range of SOC 2 report users.
+
+                                                 When a service organization makes specific commitments about system availability to one or
+                                                 a small subset of user entities, management may decide to omit such commitments from the
+                                                 description because they are unlikely to support the understanding of a broad range of SOC 2
+                                                 report users. In this situation, it is up to the individual user entity or entities to obtain addi-
+                                                 tional information from the service organization regarding the achievement of specific availa-
+                                                 bility commitments.
+                                                 Principal system requirements are those that are relevant to the trust services category or cat-
+                                                 egories addressed by the description and that are likely to be relevant to the broad range of
+                                                 SOC 2 report users. In identifying which system requirements to disclose, service organiza-
+                                                 tion management may consider internal policies that are relevant to the system being de-
+                                                 scribed, key decisions made in the design and operation of the system, and other business re-
+                                                 quirements for the system. For example, internal requirements related to the operating margin
+                                                 for the services associated with the system are not relevant to the broad range of SOC 2 re-
+                                                 port users and therefore need not be disclosed.
+                                                 When the description addresses privacy, service organization management is likely to iden-
+                                                 tify the relevant service commitments and system requirements identified in the service or-
+                                                 ganization’s privacy notice or in its privacy policy as part of its principal service commit-
+                                                 ments and system requirements.
+
+DC3: The components of the system used to pro-   Infrastructure. Disclosures about the infrastructure component include matters such as the
+vide the services, including the following:      collection of physical or virtual resources that supports an overall IT environment, including
+          a. Infrastructure                      the physical environment and related structures, IT, and related hardware (for example,
+
+
+                                                                 Page 14
+ Description Criteria fn 10                                    Implementation Guidance
+b. Software                   facilities, servers, storage, environmental monitoring equipment, data storage devices and
+c. People                     media, mobile devices, and internal networks and connected external telecommunications
+                              networks) that the service organization uses to provide the services. As an example, a cloud
+d. Procedures                 software-as-a-service provider’s infrastructure disclosure is likely to include information
+e. Data                       about its implementation of virtual system components provided by an infrastructure or host-
+                              ing service provider.
+                              System components may be described using specific technical terms that will help create a
+                              clearer understanding of the service organization’s system and system boundaries. Technical
+                              terms can also aid report users in understanding the service organization’s physical and logi-
+                              cal components when considering a service organization’s impact on the user entities. It may
+                              be helpful for service organizations to enhance their system descriptions using open systems
+                              interconnect (OSI) seven-layer model concepts. A service organization could describe how
+                              and on which layer specific components of the system operate, for example, with a statement
+                              such as this:
+                                 Encrypted connections are made to the service organization using client virtual private
+                                 network (VPN) hardware that connects system users via secure shell (SSH) to secure file
+                                 transfer protocol (SFTP) servers that operate following transport layer security (TLS)
+                                 standards and protocols.
+                              Software. Disclosures about the software component include matters such as the application
+                              programs, the IT system software that supports those application programs (operating sys-
+                              tems, middleware, and utilities), the types of databases used, the nature of external-facing
+                              web applications, and the nature of applications developed in-house, including details about
+                              whether the applications in use are mobile applications or desktop and laptop applications.
+                              People. Disclosures about the people component include information about the personnel in-
+                              volved in governance, management, operations, and security, as well as information about
+                              the users of the system (business unit personnel, developers, operators, user entity personnel,
+                              vendor personnel, and managers). Among other things, such disclosures may include an
+                              overview of the individuals responsible for evaluating and managing controls and other activ-
+                              ities that prevent, detect, mitigate, and remediate system incidents.
+
+
+
+                                              Page 15
+Description Criteria fn 10                                     Implementation Guidance
+                             Procedures. Disclosures about the automated and manual procedures implemented by the
+                             service organization primarily relate to those through which services are provided. These in-
+                             clude, as appropriate, procedures through which service activities are initiated, authorized,
+                             performed, and delivered and through which reports and other information are prepared.
+                             A process consists of a series of linked procedures designed to accomplish a particular goal
+                             (for example, the process for managing third-party risks). Procedures are the specific actions
+                             undertaken to implement a process (for example, the procedure in place to assess and manage
+                             the requisition and engagement of vendors). For that reason, service organization manage-
+                             ment may find it easier to describe procedures in the context of the process of which they are
+                             a part.
+                             Procedures are typically developed based on policies. Policies are management or board
+                             member statements of what should be done to effect control. Such statements may be docu-
+                             mented, explicitly stated in communications, or implied through actions and decisions. The
+                             service organization deploys control activities through policies that establish what is ex-
+                             pected and procedures that put policies into action.
+                             Disclosures may include an overview of significant processes relevant to the services pro-
+                             vided, whereas the detailed procedures performed may be disclosed in a separate section of
+                             the description. Reports and other information prepared by the service organization may also
+                             be included in the description to enable report users to better understand the order of activi-
+                             ties performed by the service organization.
+                             Data. Disclosures about the data component include types of data used by the system, trans-
+                             action streams, files, databases, tables, and output used or processed by the system. Such dis-
+                             closures would generally focus on customer data transmitted through the system or residing
+                             in the system, as well as any other data that directly supports the system.
+                             Data usually includes sensitive information, which may vary from organization to organiza-
+                             tion. Sensitive information may include transaction data, regulatory compliance information,
+                             financial information used for both internal and external reporting purposes, confidential
+                             sales information, confidential wholesale pricing information and order information, new de-
+                             sign ideas and branding strategies, and proprietary information provided by business part-
+                             ners. Sensitive information also includes personal information.
+
+                                             Page 16
+Description Criteria fn 10                                     Implementation Guidance
+                             When sensitive information is transmitted through or resides in the system used to provide
+                             services to users, the description may address the confidentiality or privacy categories. In that
+                             case, the description may also address the following other matters about the data component:
+
+                              •   The principal types of data created, collected, processed, transmitted, used, or stored by
+                                  the service organization and the methods used to collect, retain, disclose, dispose of, or
+                                  anonymize the data
+
+                              •   Personal information that warrants security, data protection, or breach disclosures based
+                                  on laws or commitments (for example, personally identifiable information, protected
+                                  health information, and payment card data)
+
+                              •   Third-party entity information (for example, information subject to confidentiality re-
+                                  quirements in contracts) that warrants security, data protection, or breach disclosures
+                                  based on laws or commitments
+
+                             For each system component, such disclosures would generally address aspects of confidential
+                             and personal information used in providing the service within well-defined processes and in-
+                             formal ad hoc procedures.
+                             Boundaries of the system. The description should clearly identify the system that is the focus
+                             of the SOC 2 examination. In some situations, however, it is not always clear whether a spe-
+                             cific activity or function performed at the service organization is part of the system being de-
+                             scribed. Determining the functions or processes that are outside the boundaries of the system
+                             and describing them in the description may be necessary to prevent report users from misun-
+                             derstanding the boundaries of the system. Therefore, if there is a risk that report users might
+                             be confused about whether a specific function or process is part of the system being de-
+                             scribed, the description needs to clearly identify which processes or functions are outside the
+                             boundaries of the system being described.
+                             For example, the following functions or processes at the service organization may be outside
+                             the boundaries of the system being described:
+
+
+
+                                             Page 17
+Description Criteria fn 10                                     Implementation Guidance
+
+                              •   The process used to invoice user entities for the services provided by the service organi-
+                                  zation.
+
+                              •   The conversion of new user entities to the service organization’s systems. For some ser-
+                                  vice organizations, such conversions are handled by an entirely different system than
+                                  the one being described.
+
+                              •   The receipt of data from sources outside the system being described. An example is a
+                                  payroll processing system that receives information inputs from an employer in a ready-
+                                  to-process state, which limits the responsibility of the service organization’s system to
+                                  processing the inputs provided by the employer to produce direct bank deposits to speci-
+                                  fied bank accounts.
+
+                             Service organizations frequently use a variety of applications or software tools to assist with
+                             the operation of certain aspects of their controls. Applications or software tools that support
+                             the service organization in achieving its service commitments and system requirements are
+                             likely to be within the boundaries of the system. Examples of applications or software tools
+                             that can help with the operation of controls include tools that help with the identification or
+                             detection of threats and vulnerabilities (for example, firewalls, intrusion prevention systems
+                             [IPSs], intrusion detection systems [IDSs], security information and event management sys-
+                             tems [SIEMs]), monitoring the implementation of key software settings, or monitoring the
+                             effectiveness of automated controls. When such applications or software tools are used, it
+                             may be useful for the description to include appropriate disclosures about those applications
+                             or software tools.
+                             Third-party access. Vendors, business partners, and others (third parties) often store, process,
+                             and transmit sensitive data; third parties may also have access to a service organization’s sys-
+                             tem. In some situations, these third parties may perform functions or activities within one or
+                             more components of the system. Disclosures about third-party access may include matters
+                             such as the nature of third parties’ access and connectivity to the service organization’s sys-
+                             tem and a description of the functions or activities performed by such third parties. Disclo-
+                             sures may also include the controls implemented and activities performed by service
+
+                                             Page 18
+              Description Criteria fn 10                                                  Implementation Guidance
+                                                        organization management to monitor the risks of doing business with vendors and other third
+                                                        parties, particularly when such activities are significant to the achievement of the service or-
+                                                        ganization’s service commitments and system requirements.
+
+DC4: For identified system incidents that (a) were
+the result of controls that were not suitably de-          •   Judgment is needed when determining whether to disclose an incident. Such judg-
+signed or operating effectively or (b) otherwise re-           ments may be informed by consideration of whether the system resulted from one or
+sulted in a significant failure in the achievement of          more controls that were not suitably designed or operating effectively.
+one or more of those service commitments and sys-
+                                                           •   in a significant change to the service organization’s controls to detect, prevent, miti-
+tem requirements, as of the date of the description
+                                                               gate, remediate, or recover from system incidents.
+(for a type 1) or during the period of time covered
+by the description (for a type 2), as applicable, the      •   in a significant failure in the achievement of one or more of the service organization’s
+following information:                                         service commitments and system requirements.
+     a.   Nature of each incident
+     b.   Timing surrounding the incident                  •   in public disclosure due to the requirement of a law or regulation.
+     c.   Extent (or effect) of the incident and its       •   in a material effect on the service organization’s financial position or results of opera-
+          disposition                                          tions and required disclosure in a financial statement filing.
+
+                                                           •   in the imposition of fines or sanctions by any legal or regulatory agency.
+
+                                                           •   in the service organization’s withdrawal from material markets or cancellation of ma-
+                                                               terial contracts.
+
+                                                           •   in the theft, alteration, or unauthorized use of sensitive information, including proprie-
+                                                               tary information, personally identifiable information, or personal health information.
+
+                                                           •   in a demand for payment in order to restore encrypted information or to prevent the
+                                                               inappropriate disclosure of stolen information.
+
+                                                           •   in the general public’s knowledge of the system incident.
+
+
+                                                                        Page 19
+Description Criteria fn 10                                     Implementation Guidance
+                             If an incident affected service organization technology, processes, or systems that are not in-
+                             cluded in the description, management may consider whether the incident resulted from inef-
+                             fective controls shared among all the service organization’s systems. In that case, manage-
+                             ment may need to consider whether there are controls in place, such as segmentation between
+                             systems, to prevent a similar breach from occurring in the system being described. If shared
+                             controls are ineffective or there are no additional controls to prevent a similar breach in the
+                             system being described, management would be more likely to disclose the incident.
+                             Disclosures about identified security incidents are not intended to be made at a detailed level,
+                             which might increase the likelihood that a hostile party could exploit a security vulnerability,
+                             thereby compromising the service organization’s ability to achieve its service commitments
+                             and system requirements. Rather, the disclosures are intended to enable report users to under-
+                             stand the nature of the risks faced by the service organization and the impact of the realiza-
+                             tion of those risks.
+                             Assume that the service organization identified a security breach that resulted in the service
+                             organization’s failure to achieve one or more of its service commitments and system require-
+                             ments. The breach, which occurred six months prior to the start of the period covered by the
+                             description, had not been fully remediated during the period covered by the description. In
+                             this example, management would likely need to disclose the incident in the description to en-
+                             able report users to understand the nature of the risks faced by the service organization and
+                             the impact of the realization of those risks. In addition, service organization management
+                             should consider whether to disclose known incidents at a subservice organization, regardless
+                             of whether management has elected to use the inclusive or carve-out method.
+                             If there have been no significant incidents that require disclosure, management may disclose
+                             that fact in the description.
+
+
+
+
+                                             Page 20
+                     Description Criteria fn 10                                                        Implementation Guidance
+  DC5: The applicable trust services criteria and the              TSP section 100, 2017 Trust Services Criteria for Security, Availability, Processing Integrity,
+  related controls designed to provide reasonable as-              Confidentiality, and Privacy (With Revised Points of Focus — 2022),fn 11 presents the criteria
+  surance that the service organization’s service                  for each of the trust services categories. The description should include information about
+  commitments and system requirements were                         each of the criteria related to the trust services category or categories covered by the descrip-
+  achieved                                                         tion (applicable trust services criteria). Additionally, for each of the applicable trust services
+                                                                   criteria, the description would include information about the controls designed and imple-
+                                                                   mented to achieve the related service commitments and system requirements based on the
+                                                                   trust services criteria. For example, if the description addresses availability, information
+                                                                   about controls implemented by the service organization to address the common criteria in the
+                                                                   trust services criteria and the additional trust services criteria for availability would be in-
+                                                                   cluded in the description.
+
+                                                                   When the service organization discloses a principal service commitment regarding the imple-
+                                                                   mentation of controls to meet the requirements of a process or control framework, users
+                                                                   would generally expect the description to include information about how the service organi-
+                                                                   zation’s implemented controls met those requirements.
+
+                                                                   Risks that threaten the achievement of service commitments and system requirements. Be-
+                                                                   cause risk assessment is critical to the design and implementation of controls to mitigate
+                                                                   those risks, users may find disclosures about the service organization’s risk assessment pro-
+                                                                   cess particularly helpful. In addition to a description of its risk assessment process, useful
+                                                                   disclosures may include the following:
+                                                                         •   Risks that may have a significant effect on the service organization’s ability to
+                                                                             achieve its service commitments and system requirements.
+                                                                         •   Whether any aspect of risk assessment is performed by third parties
+
+
+
+
+fn 11
+        TSP section 100 can be found in AICPA Trust Services Criteria.
+
+
+                                                                                     Page 21
+             Description Criteria fn 10                                                  Implementation Guidance
+                                                          •   The process for addressing risks introduced by use of subservice organizations or
+                                                              other third parties, including those that have access to customer and employee data
+
+
+
+
+DC6: If service organization management as-            Complementary user entity controls (CUECs). CUECs are those controls that service organi-
+sumed, in the design of the service organization’s     zation management assumed, in the design of the system, would be implemented by user en-
+system, that certain controls would be imple-          tities and that are necessary, in combination with controls at the service organization, to pro-
+mented by user entities, and those controls are nec-   vide reasonable assurance that the service organization’s service commitments and system
+essary, in combination with controls at the service    requirements would be achieved.
+
+                                                                       Page 22
+             Description Criteria fn 10                                                Implementation Guidance
+organization, to provide reasonable assurance that   Usually, a service organization restricts its service commitments to matters for which it is re-
+the service organization’s service commitments       sponsible and that it can reasonably achieve by itself. In that case, the service organization
+and system requirements would be achieved, those     can achieve its service commitments and system requirements without depending on the im-
+complementary user entity controls (CUECs)           plementation of CUECs at user entities. Similarly, system requirements are generally derived
+                                                     from those commitments. Consider trust services criterion CC6.2:
+                                                         Prior to issuing system credentials and granting system access, the entity registers and au-
+                                                         thorizes new internal and external users whose access is administered by the entity. For
+                                                         those users whose access is administered by the entity, user system credentials are re-
+                                                         moved when user access is no longer authorized.
+                                                     CC6.2 requires only that the service organization register a system user (identified by the
+                                                     user entity as an authorized user) and issue system credentials to that user after the user entity
+                                                     supplies the service organization with a list of authorized users. The user entity is responsible
+                                                     for identifying the users and supplying the service organization with a list of authorized us-
+                                                     ers. If the user entity provides a list and inadvertently includes employees who should not be
+                                                     granted access, the service organization has still met both trust services criterion CC6.2 and
+                                                     its service commitment to the user entity. Accordingly, identifying authorized users and com-
+                                                     municating that information to the service organization are not considered CUECs.
+                                                     The description is presented in accordance with this criterion if the CUECs are complete, ac-
+                                                     curately described, and relevant to the service organization’s achievement of its service com-
+                                                     mitments and system requirements.
+                                                     User entity responsibilities. In addition to CUECs, user entities may have other responsibili-
+                                                     ties when using the system. Those responsibilities are necessary for the user entity to derive
+                                                     the intended benefits of using the services of the service organization. For example, the user
+                                                     of an express delivery service is responsible for providing complete and accurate recipient
+                                                     information and for using appropriate packaging materials. Such responsibilities are referred
+                                                     to as user entity responsibilities.
+                                                     Trust services criterion CC2.3 states, “the entity communicates with external parties regard-
+                                                     ing matters affecting the functioning of internal control.” This would include communication
+                                                     of user entity responsibilities. However, because user entity responsibilities can be volumi-
+                                                     nous, they are often communicated through other methods (for example, by describing them
+
+                                                                     Page 23
+              Description Criteria fn 10                                                  Implementation Guidance
+                                                        in user manuals). Consequently, disclosure of user entity responsibilities in the description is
+                                                        usually not practical. Instead, management ordinarily identifies in the description only the
+                                                        types of communications it makes to external users about user entity responsibilities. Deter-
+                                                        mining the form and content of such communication is the responsibility of service organiza-
+                                                        tion management.
+                                                        When service organization management communicates user entity responsibilities only to
+                                                        specific parties (such as in contracts with user entities), management considers whether other
+                                                        intended users of the SOC 2 report are likely to misunderstand it; if misunderstanding is
+                                                        likely, management should limit the distribution of the SOC 2 report to those specific parties.
+                                                        If service organization management does not want to limit the distribution of the report, man-
+                                                        agement would include the significant user entity responsibilities in the description of the
+                                                        system to prevent users from misunderstanding the system and the service auditor’s report. In
+                                                        that case, the report would be appropriate for the broad range of SOC 2 users.
+
+
+DC7: If the service organization uses a subservice      Inclusive method. When service organization management elects the inclusive method, the
+organization fn 11 and the controls at the subservice   relevant aspects of the subservice organization’s infrastructure, software, people, procedures,
+organization are necessary, in combination with         and data are considered part of the service organization’s system and are included in the de-
+controls at the service organization, to provide rea-   scription of the service organization’s system. Although the relevant aspects are considered a
+sonable assurance that the service organization’s       part of the service organization’s system, the portions of the system, and related system con-
+service commitments and system requirements are         trols, that are attributable to the subservice organization would be separately identified in the
+achieved, the following:                                description. Such disclosures include the aspects of the internal control components relevant
+   a. When service organization management              to identification and assessment of risks that would prevent the service organization from
+      elects to use the inclusive method:               achieving its service commitments and system requirements and the design, implementation,
+                                                        and operation of controls to mitigate those risks.
+          i. The nature of the service provided by
+             the subservice organization                Carve-out method. When service organization management elects the carve-out method, dis-
+                                                        closure of the identity of the subservice organization may be useful to user entities or busi-
+          ii. The controls at the subservice organi-    ness partners who want to obtain information about and perform procedures related to the
+              zation that are necessary, in combina-    services provided by the subservice organization.
+              tion with controls at the service or-
+              ganization to provide reasonable
+
+                                                                        Page 24
+         Description Criteria fn 10                                                 Implementation Guidance
+         assurance that the service organiza-       Complementary subservice organization controls (CSOCs) are controls that service organiza-
+         tion’s service commitments and sys-        tion management assumed, in the design of the system, would be implemented by subservice
+         tem requirements are achieved              organizations and are necessary, in combination with controls at the service organization to
+      iii. Relevant aspects of the subservice or-   provide reasonable assurance that the service organization’s service commitments and system
+           ganization’s infrastructure, software,   requirements would be achieved. When using the carve-out method, the description would
+           people, procedures, and data             identify the broad category of CSOCs or the types of individual controls that the subservice
+                                                    organization is assumed to have implemented. To be meaningful to report users, only CSOCs
+      iv. The portions of the system that are at-   that are specific to the services provided by the system should be described.
+          tributable to the subservice organiza-
+          tion                                    It is important that the subservice organization’s responsibilities for implementing those
+                                                  CSOCs are included in the description; it is also important that the description indicates that
+b. When service organization management de- the related service commitments and system requirements can be achieved only if the CSOCs
+   cides to use the carve-out method:             are suitably designed and operating effectively during the period addressed by the descrip-
+      i. The nature of the service provided by tion.
+          the subservice organization             The description may also include disclosures that identify those instances in which the ser-
+      ii. Each of the applicable trust services   vice   organization achieves its service commitments and system requirements solely by the
+          criteria that are intended to be met by operation of service organization controls and those instances in which a combination of con-
+          controls at the subservice organiza-    trols at the service organization and CSOCs are necessary to provide reasonable assurance
+          tion                                    that the service organization’s service commitments and system requirements were achieved.
+      iii. The types of controls that service or-   Examples of CSOCs include the following:
+           ganization management assumed, in
+           the design of the service organiza-       • Controls relevant to the completeness and accuracy of transaction processing on behalf
+           tion’s system, would be implemented          of the service organization
+           by the subservice organization that
+           are necessary, in combination with        • Controls relevant to the completeness and accuracy of specified reports provided to and
+           controls at the service organization, to     used by the service organization
+           provide reasonable assurance that the
+           service organization’s service com-       • Logical access controls relevant to the processing performed for the service organization
+           mitments and system requirements
+           are achieved (commonly referred to        • Controls over the procedures to detect and respond to potential system incidents
+
+
+
+                                                                   Page 25
+Description Criteria fn 10                                             Implementation Guidance
+as complementary subservice organi-    • The processes in place to communicate significant system incidents and deviations in
+zation controls or CSOCs)                the effectiveness of controls to service organization management
+
+                                       • The risk assessment process and the policies and procedures implemented to mitigate
+                                         those risks
+
+                                       • Activities such as internal audit procedures or quality control reviews that the subservice
+                                         organization has in place to monitor the effectiveness of its control activities
+
+                                      The description is presented in accordance with this criterion if the CSOCs are complete, ac-
+                                      curately described, and relevant to the service organization’s achievement of the service com-
+                                      mitments and system requirements related to the system being described.
+                                      Other matters. A service organization that uses multiple subservice organizations may pre-
+                                      pare its description using the carve-out method for one or more subservice organizations and
+                                      the inclusive method for others.
+                                      Regardless of the method service organization management selects, the description would
+                                      disclose controls designed to provide reasonable assurance that the service organization’s ser-
+                                      vice commitments and system requirements are achieved, which include controls that the ser-
+                                      vice organization uses to monitor the services provided by the subservice organization. Such
+                                      monitoring controls may include a combination of the following:
+
+                                       • Testing of controls at the subservice organization by members of the service organiza-
+                                         tion’s internal audit function
+
+                                       • Reviewing and reconciling output reports
+
+                                       • Holding periodic discussions with the subservice organization personnel and evaluating
+                                         subservice organization performance against established service-level objectives and
+                                         agreements
+
+                                       • Making site visits to the subservice organization
+
+
+                                                      Page 26
+             Description Criteria fn 10                                                  Implementation Guidance
+                                                        • Inspecting type 2 SOC 2 reports on the subservice organization’s system
+
+                                                        • Monitoring external communications, such as complaints from user entities relevant to
+                                                          the services performed by the subservice organization
+
+
+
+DC8: Any specific criterion of the applicable trust    If one or more applicable trust services criteria are not relevant to the system being described,
+services criteria that is not relevant to the system   service organization management includes in the description an explanation of why such cri-
+and the reasons it is not relevant                     teria are not relevant. For example, an applicable trust services criterion may not be relevant
+                                                       if it does not apply to the services provided by the service organization.
+                                                       Assume user entities — not the service organization — collect personal information from the
+                                                       user entities’ customers. When the description addresses controls over privacy, service organ-
+                                                       ization management would not disclose in its description the user entities’ controls over col-
+                                                       lection; however, the reason for that omission would be disclosed. In contrast, the existence
+                                                       of a policy prohibiting certain activities is not sufficient to render a criterion not applicable.
+                                                       For example, when the description addresses controls over privacy, it would be inappropriate
+                                                       for service organization management to omit from the description disclosures of personal in-
+                                                       formation to third parties based only on the fact that the service organization’s policies forbid
+                                                       such disclosures. Instead, the description would describe the policies and related controls for
+                                                       preventing or detecting such disclosures.
+                                                       If a criterion is relevant to the services provided, it is relevant even if all components of the
+                                                       system used to provide the related aspect of the services have been outsourced to a subservice
+                                                       organization. For example, a service organization uses an infrastructure-as-a-service cloud
+                                                       provider for all IT systems related to the services provided. The subservice organization is
+                                                       responsible for deleting information from its hosting environment before ending logical and
+                                                       physical access of storage devices. Because the service organization still has a contractual
+                                                       commitment to protect the information of its customers, CC6.5, The entity discontinues logi-
+                                                       cal and physical protections over physical assets only after the ability to read or recover
+
+
+
+                                                                       Page 27
+              Description Criteria fn 10                                                    Implementation Guidance
+                                                         data and software from those assets has been diminished and is no longer required to meet
+                                                         the entity’s objectives, is still relevant, even if the subservice organization is carved out.
+                                                         The description may also include a disclosure that all the trust services criteria for the cate-
+                                                         gory or categories addressed by the description are relevant to the system.
+DC9: In a description that covers a period of time       Significant changes to be disclosed consist of those that are likely to be relevant to the broad
+(type 2 examination), the relevant details of signifi-   range of report users. Disclosure of such changes is expected to include an appropriate level
+cant changes to the service organization’s system        of detail, such as the date the changes occurred and how the system differed before and after
+and controls during that period that are relevant to     the changes.
+the service organization’s service commitments
+and system requirements                                  Examples of significant changes to a system include the following:
+
+                                                          • Changes to the services provided
+
+                                                          • Significant changes to IT and security personnel
+
+                                                          • Significant changes to system processes, IT architecture and applications, and the pro-
+                                                            cesses and system used by subservice organizations
+
+                                                          • Changes to legal and regulatory requirements that could affect system requirements
+
+                                                          • Changes to organizational structure resulting in a change to internal control over the sys-
+                                                            tem (for example, a change to the legal entity)
+
+                                                         The description may also include a statement that there were no significant changes to the
+                                                         system that are relevant to the service organization’s service commitments and system re-
+                                                         quirements.
+
+
+
+
+                                                                         Page 28
+Appendix — Glossary
+.20
+
+      For purposes of this document, the following terms have the meanings attributed as follows:
+
+         applicable trust services criteria. The criteria codified in TSP section 100, 2017 Trust Services
+            Criteria for Security, Availability, Processing Integrity, Confidentiality, and Privacy (With Re-
+            vised Points of Focus – 2022), used to evaluate controls relevant to the trust services category or
+            categories included within the scope of a particular examination.
+
+         board or board of directors. Individuals with responsibility for overseeing the strategic direction of
+            the service organization and the obligations related to the accountability of the service organiza-
+            tion. Depending on the nature of the service organization, such responsibilities may be held by a
+            board of directors or supervisory board for a corporation, a board of trustees for a not-for-profit
+            service organization, a board of governors or commissioners for a government service organiza-
+            tion, general partners for a partnership, or an owner for a small business.
+
+         boundaries of the system (or system boundaries). The boundaries of a system are the specific as-
+            pects of a service organization’s infrastructure, software, people, procedures, and data necessary
+            to provide its services. When systems for multiple services share aspects, infrastructure, soft-
+            ware, people, procedures, and data, the systems will overlap, but the boundaries of each system
+            will differ. In a SOC 2 engagement that addresses the confidentiality and privacy criteria, the
+            system boundaries cover, at a minimum, all the system components as they relate to the life cycle
+            of the confidential and personal information within well-defined processes and informal ad hoc
+            procedures.
+
+         business partner. An individual or business (and its employees), other than a vendor, that has some
+            degree of involvement with the service organization’s business dealings or agrees to cooperate,
+            to any degree, with the service organization (for example, a computer manufacturer who works
+            with another company that supplies it with parts).
+
+         carve-out method. Method of addressing the services provided by a subservice organization in
+            which the components of the subservice organization’s system used to provide the services to the
+            service organization are excluded from the description of the service organization’s system and
+            from the scope of the examination. However, the description identifies (1) the nature of the ser-
+            vices performed by the subservice organization; (2) the types of controls expected to be per-
+            formed at the subservice organization that are necessary, in combination with controls at the ser-
+            vice organization, to provide reasonable assurance that the service organization’s service com-
+            mitments and system requirements were achieved; and (3) the controls at the service organiza-
+            tion used to monitor the effectiveness of the subservice organization’s controls.
+
+         complementary subservice organization controls. Controls that service organization management
+            assumed, in the design of the service organization’s system, would be implemented by the sub-
+            service organization that are necessary, in combination with controls at the service organization,
+            to provide reasonable assurance that the service organization’s service commitments and system
+            requirements are achieved.
+
+                                                  Page 29
+complementary user entity controls. Controls that service organization management assumed, in
+   the design of the service organization’s system, would be implemented by user entities and are
+   necessary, in combination with controls at the service organization, to provide reasonable assur-
+   ance that the service organization’s service commitments and system requirements would be
+   achieved.
+
+controls at a service organization. The policies and procedures at a service organization that are
+   part of the service organization’s system of internal control. Controls exist within each of the five
+   COSO internal control components: control environment, risk assessment, control activities, in-
+   formation and communication, and monitoring. The objective of a service organization’s system
+   of internal control is to provide reasonable assurance that its service commitments and system
+   requirements are achieved.
+
+controls at a subservice organization. The policies and procedures at a subservice organization that
+   are relevant to the service organization’s achievement of its service commitments and system
+   requirements.
+
+criteria. The benchmarks used to measure or evaluate the subject matter.
+
+data controller. An organization that (alone or jointly with others) determines the purposes for and
+   the means by which personal data is processed.
+
+data processor. An organization that processes personal data at the direction of a data controller. In
+   many cases, a service organization may process personal data for its business-to-business (B2B)
+   customers (user entities), which in turn may function as data controllers. In other cases, a service
+   organization may function as a data controller, depending on the facts and circumstances.
+
+external users. Users, other than entity personnel, who are authorized by entity management, cus-
+   tomers, or other authorized persons to interact with the entity’s information system.
+
+inclusive method. Method of addressing the services provided by a subservice organization in
+    which the description of the service organization’s system includes a description of the (a) the
+    nature of the services provided by the subservice organization and (b) the components of the sub-
+    service organization’s system used to provide services to the service organization, including the
+    subservice organization’s controls that are necessary, in combination with controls at the service
+    organization, to provide reasonable assurance that the service organization’s service commit-
+    ments and system requirements were achieved. (When using the inclusive method, controls at the
+    subservice organization are subject to the service auditor’s examination procedures. Because the
+    subservice organization’s system components are included in the description, those components
+    are included in the scope of the examination.)
+
+information life cycle. The collection, use, retention, disclosure, disposal, or anonymization of con-
+    fidential or personal information within well-defined processes and informal ad hoc procedures.
+
+intended users. Individuals or entities that the service organization intends will be report users.
+
+
+
+
+                                          Page 30
+internal control. A process, effected by a service organization’s board of directors, management,
+    and other personnel, designed to provide reasonable assurance regarding the achievement of ob-
+    jectives relating to operations, reporting, and compliance.
+
+operating effectiveness (or controls that are operating effectively). Controls that operate effec-
+   tively provide reasonable assurance of achieving the service organization’s service commitments
+   and system requirements based on the applicable trust services criteria.
+
+personal information. Information that is about, or can be related to, an identifiable individual.
+
+policies. Management or board member statements of what should be done to effect control. Such
+    statements may be documented, explicitly stated in communications, or implied through actions
+    and decisions. Policies serve as the basis for procedures.
+
+process or control framework. A framework that contains a set of processes or controls, estab-
+   lished by another party, that organizations are expected to implement in support of establishing
+   an effective system of internal control. These frameworks are usually developed by an industry
+   group, regulator, governmental entity, standard-setting body, or other organization (collectively
+   referred to as sponsoring organizations) to obtain information from organizations with which
+   they do business about their processes or controls. The most common types of process or control
+   frameworks relate to security and privacy.
+
+privacy notice. A written communication by entities that collect personal information, to the indi-
+   viduals about whom personal information is collected, about the entity’s (a) policies regarding
+   the nature of the information that they will collect and how that information will be used, re-
+   tained, disclosed, and disposed of or anonymized and (b) commitment to adhere to those poli-
+   cies. A privacy notice also includes information about such matters as the purpose of collecting
+   the information, the choices that individuals have related to their personal information, the secu-
+   rity of such information, and how individuals can contact the entity with inquiries, complaints,
+   and disputes related to their personal information. When a user entity collects personal infor-
+   mation from individuals, it typically provides a privacy notice to those individuals.
+
+report users (specified users or specified parties) of a SOC 2 report. In this document, the term
+   refers to users of a SOC 2 report. The service auditor’s report included in a SOC 2 report ordi-
+   narily includes an alert restricting the use of the report to specified parties who possess sufficient
+   knowledge and understanding of the service organization and the system to understand the re-
+   port. The expected knowledge is likely to include an understanding of the following matters:
+
+       •   The nature of the service provided by the service organization
+
+       •   How the service organization’s system interacts with user entities, business partners, sub-
+           service organizations, and other parties
+
+       •   Internal control and its limitations
+
+
+
+
+                                          Page 31
+       •   Complementary user entity controls and complementary subservice organization controls
+           and how those controls interact with the controls at the service organization to achieve
+           the service organization’s service commitments and system requirements
+
+       •   User entity responsibilities and how they may affect the user entity’s ability to effectively
+           use the service organization’s services
+
+       •   The applicable trust services criteria
+
+       •   The risks that may threaten the achievement of the service organization’s service commit-
+           ments and system requirements and how controls address those risks
+
+   Users likely to possess such knowledge include user entities and their personnel, business part-
+   ners and their personnel, practitioners providing services to such user entities and business part-
+   ners, prospective user entities and business partners, and regulators who understand how the ser-
+   vice organization’s system may be used to provide the services.
+
+sensitive information. Sensitive information varies from organization to organization but often in-
+   cludes nonpublic information such as the following: regulatory compliance information; finan-
+   cial information used for both internal and external reporting purposes; confidential sales infor-
+   mation, including customer lists; confidential wholesale pricing information and order infor-
+   mation; confidential product information, including product specifications, new design ideas, and
+   branding strategies; and proprietary information provided by business partners, including manu-
+   facturing data, sales and pricing information, and licensed designs. Sensitive information also
+   includes personal information.
+
+service auditor. As used in this document, a CPA who performs a SOC 2 examination of controls
+   within a service organization’s system relevant to security, availability, processing integrity, con-
+   fidentiality, or privacy.
+
+service commitments. Declarations made by service organization management to user entities and
+   others (such as user entities’ customers) about the system used to provide the service. Service
+   commitments can be communicated in written individualized agreements, standardized contracts,
+   service-level agreements, or published statements (for example, in a security practices state-
+   ment).
+
+service organization. An organization, or segment of an organization, that provides services to user
+   entities.
+
+SOC 2 examination. An examination engagement to report on whether (a) the description of the
+  service organization’s system is in accordance with the description criteria, (b) the controls were
+  suitably designed to provide reasonable assurance that the service organization’s service commit-
+  ments and system requirements were achieved based on the applicable trust services criteria, and
+  (c) in a type 2 report, the controls operated effectively to provide reasonable assurance that the
+  service organization’s service commitments and system requirements were achieved based on
+  the applicable trust services criteria. The SOC 2 examination is performed in accordance with the
+  attestation standards and AICPA Guide SOC 2® Reporting on an Examination of Controls at a
+
+                                          Page 32
+   Service Organization Relevant to Security, Availability, Processing Integrity, Confidentiality, or
+   Privacy.
+
+subsequent events. Events or transactions that occur after the specified period covered by the en-
+   gagement, but prior to the date of the service auditor’s report, which could have a significant ef-
+   fect on the evaluation of the presentation of the description of the service organization’s system
+   or the evaluation of the suitability of design and operating effectiveness of controls.
+
+subservice organization. A vendor used by a service organization that performs controls that are
+   necessary, in combination with controls at the service organization, to provide reasonable assur-
+   ance that the service organization’s service commitments and system requirements were
+   achieved.
+
+suitability of design (or suitably designed controls). Controls are suitably designed if they have
+    the potential to provide reasonable assurance that the service organization’s service commit-
+    ments and system requirements would be achieved. Suitably designed controls are operated as
+    designed by persons who have the necessary authority and competence to perform the control.
+
+system. Refers to the infrastructure, software, procedures, and data that are designed, implemented,
+    and operated by people to achieve one or more of the organization’s specific business objectives
+    (for example, delivery of services or production of goods) in accordance with management-spec-
+    ified requirements.
+
+system components. Refers to the individual elements of a system, which may be classified into the
+    following five categories: infrastructure, software, people, procedures, and data.
+
+system event. An occurrence that could lead to the loss of, or disruption to, operations, services, or
+    functions and could result in a service organization’s failure to achieve its service commitments
+    or system requirements. Such an occurrence may arise from actual or attempted unauthorized
+    access or use by internal or external parties and (a) impair (or potentially impair) the availability,
+    integrity, or confidentiality of information or systems; (b) result in unauthorized disclosure or
+    theft of information or other assets or the destruction or corruption of data; or (c) cause damage
+    to systems. Such occurrences also may arise from the failure of the system to process data as de-
+    signed or from the loss, corruption, or destruction of data used by the system.
+
+system incident. A system event that requires action on the part of service organization management
+    to prevent or reduce the impact of the event on the service organization’s achievement of its ser-
+    vice commitments and system requirements.
+
+system requirements. Specifications regarding how the system should function to (a) meet the ser-
+    vice organization’s service commitments to user entities and others (such as user entities’ cus-
+    tomers); (b) meet the service organization’s commitments to vendors and business partners; (c)
+    comply with relevant laws and regulations and guidelines of industry groups, such as business or
+    trade associations; and (d) achieve other objectives of the service organization that are relevant to
+    the trust services category or categories addressed by the description. Requirements are often
+    specified in the service organization’s system policies and procedures, system design documenta-
+    tion, contracts with customers, and government regulations.
+
+
+                                           Page 33
+user entity. An entity that uses the services provided by a service organization.
+
+vendor. An individual or business (and its employees) engaged to provide services to the service
+   organization. Depending on the services a vendor provides (for example, if it operates certain
+   controls on behalf of the service organization that are necessary, in combination with the service
+   organization’s controls, to provide reasonable assurance that the service organization’s service
+   commitments and system requirements were achieved), a vendor might also be a subservice or-
+   ganization.
+
+
+
+
+                                         Page 34
+© 2022 Association of International Certified Professional Accountants. All rights reserved. AICPA and American Institute of CPAs are trademarks of the American Institute of Certified PublicAccountants
+and are registered in the US, the EU and other countries. SOC 1®, SOC 2® and SOC 3® trademarks are registered trademarks of the AICPA. The Globe Design is a trademark of the Associationof International
+Certified Professional Accountants and licensed to the AICPA. 2210-647280
+

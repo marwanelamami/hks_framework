@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.iso.org/standard/27001",
+      "title": "ISO.org – ISO/IEC 27001:2022 official standard page",
+      "accessed": "2026-08-23"
+    },
+    {
+      "id": 2,
+      "url": "https://grcsolutions.io/iso27001-certification-costs",
+      "title": "IT Governance (GRCSolutions) – ISO 27001 Cost: What Businesses Need to Know",
+      "accessed": "2026-08-23"
+    },
+    {
+      "id": 3,
+      "url": "https://grcengclub.com/learn/compliance-as-code",
+      "title": "GRC Engineering Club – Compliance as Code: Policy as Code for GRC",
+      "accessed": "2026-08-23"
+    },
+    {
+      "id": 4,
+      "url": "https://auditsuisse.com/soc-2-type-1-vs-type-2",
+      "title": "AuditSuisse – SOC 2 Type I vs Type II",
+      "accessed": "2026-08-23"
+    },
+    {
+      "id": 5,
+      "url": "https://ledgerism.net/soc-2-audit",
+      "title": "Ledgerism – SOC 2 Audit: Type 1 vs Type 2, Timeline, Cost, TSC",
+      "accessed": "2026-08-23"
+    },
+    {
+      "id": 6,
+      "url": "https://securancepro.com/blog/soc-2-type-i-vs-type-ii",
+      "title": "Securance – SOC 2 Type I vs Type II observation windows",
+      "accessed": "2026-08-23"
+    },
+    {
+      "id": 7,
+      "url": "https://soc2auditors.org/insights/drata-review",
+      "title": "SOC2Auditors – Drata Review (automated evidence collection mechanics)",
+      "accessed": "2026-08-23"
+    },
+    {
+      "id": 8,
+      "url": "https://www.lrqa.com/en-gb/iso-27001/faqs",
+      "title": "LRQA – ISO 27001 Certification Services FAQ (Stage 1/Stage 2)",
+      "accessed": "2026-08-23"
+    },
+    {
+      "id": 9,
+      "url": "file:///home/marwanelamami/MyProjects/hks_project/data_needed/resources.zip!/ISO_IEC_27001-2022_redline.pdf",
+      "title": "ISO/IEC 27001:2022 (third edition, 2022-10) – provided resource PDF",
+      "accessed": "2026-08-23",
+      "quotes": [
+        {
+          "text": "This document specifies the requirements for establishing, implementing, maintaining and continually improving an information security management system within the context of the organization.",
+          "added": "2026-08-23"
+        },
+        {
+          "text": "The information security management system preserves the confidentiality, integrity and availability of information by applying a risk management process and gives confidence to interested parties that risks are adequately managed.",
+          "added": "2026-08-23"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "file:///home/marwanelamami/MyProjects/hks_project/data_needed/resources.zip!/ISO_IEC_27002-2022_full.pdf",
+      "title": "ISO/IEC 27002:2022 – Information security controls (provided resource PDF)",
+      "accessed": "2026-08-23",
+      "quotes": [
+        {
+          "text": "A control is defined as a measure that modifies or maintains risk.",
+          "added": "2026-08-23"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "file:///home/marwanelamami/MyProjects/hks_project/data_needed/resources.zip!/AICPA_TSC_2017_with_Revised_PoFs_2022_CLEAN.pdf",
+      "title": "AICPA Trust Services Criteria 2017 (with Revised Points of Focus, 2022) – provided resource PDF",
+      "accessed": "2026-08-23",
+      "quotes": [
+        {
+          "text": "Security. Information and systems are protected against unauthorized access, unauthorized dis- closure of information, and damage to systems that could compromise the availability, integrity, confidentiality, and privacy of information or systems and affect the entity’s ability to achieve its object",
+          "added": "2026-08-23"
+        },
+        {
+          "text": "Availability. Information and systems are available for operation and use to meet the entity’s ob- jectiv",
+          "added": "2026-08-23"
+        },
+        {
+          "text": "Processing integrity (over the provisioning of services or the production, manufacturing, or dis- tribution of goods). System processing is complete, valid, accurate, timely, and authorized to meet the entity’s objective",
+          "added": "2026-08-23"
+        },
+        {
+          "text": "Confidentiality. Information designated as confidential is protected to meet t",
+          "added": "2026-08-23"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "file:///home/marwanelamami/MyProjects/hks_project/data_needed/resources.zip!/AICPA_SOC2_Guide_Oct2022_LATEST.pdf",
+      "title": "AICPA SOC 2 Guide: Reporting on an Examination of Controls at a Service Organization (Oct 15, 2022) – provided resource PDF",
+      "accessed": "2026-08-23",
+      "quotes": [
+        {
+          "text": "Generally, in a type 1 examination, the time frame is as of a point in time; in a type 2 examination, it is for a specified period of time.",
+          "added": "2026-08-23"
+        },
+        {
+          "text": "In a type 1 examination, the service auditor does not express an opinion about whether the controls operated effectively.",
+          "added": "2026-08-23"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "url": "file:///home/marwanelamami/MyProjects/hks_project/data_needed/resources.zip!/AICPA_SOC2_Description_Criteria_DC200.pdf",
+      "title": "AICPA DC200: 2018 Description Criteria for a SOC 2 Report (rev. 2022) – provided resource PDF",
+      "accessed": "2026-08-23"
+    }
+  ]
+}
