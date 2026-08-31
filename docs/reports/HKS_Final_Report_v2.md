@@ -231,14 +231,14 @@ All three individual reports independently selected identity/access management, 
 
 We resolved the conflict on attack data rather than preference. Reported figures from published analyses of the Verizon 2026 DBIR put ransomware at 48% of breaches, vulnerability exploitation at 31% as the leading initial-access vector, and credential abuse present in 39%. One caveat belongs next to those numbers: they are secondary-source-derived figures about a report we did not read in full, so we rely on them directionally rather than precisely. Against that threat profile, tested recovery capability is the control that still limits damage when every preceding control has failed. Encryption constrains post-failure disclosure but does not restore operations, so it is folded into control 5 as its data-protection elements (encrypted backups, key administration separated from key use) rather than given its own slot. Awareness & training stays in considered-not-selected below with its case stated.
 
-Mnemonic for the spine: **Know it** (inventory) · **Lock it** (identity) · **Watch it** (logging) · **Change it safely** (pipeline) · **Recover anyway** (backup).
+Mnemonic for the spine: **Lock it** (identity) · **Change it safely** (pipeline) · **Patch & protect it** (vulnerability) · **Watch it** (logging) · **Recover anyway** (backup).
 
 | # | Internal ID | Control | Primary Annex A | Primary TSC |
 |---|---|---|---|---|
 | 1 | HKS-AC-01 | Phishing-resistant identity & access lifecycle | A.5.15–5.18, A.8.2, A.8.5 | CC6.1–CC6.3, CC6.6 |
-| 2 | HKS-VM-03 | Vulnerability & configuration management | A.8.8, A.8.9, A.8.19, A.5.7 | CC7.1, CC8.1 |
-| 3 | HKS-LM-04 | Centralised logging, monitoring & incident response | A.8.15–8.17, A.5.24–5.26 | CC7.2–CC7.5 |
-| 4 | HKS-CM-02 | Secure change & CI/CD pipeline integrity | A.8.25, A.8.28–8.32 | CC8.1, CC6.8 |
+| 2 | HKS-CM-02 | Secure change & CI/CD pipeline integrity | A.8.25, A.8.28–8.32 | CC8.1, CC6.8 |
+| 3 | HKS-VM-03 | Vulnerability & configuration management | A.8.8, A.8.9, A.8.19, A.5.7 | CC7.1, CC8.1 |
+| 4 | HKS-LM-04 | Centralised logging, monitoring & incident response | A.8.15–8.17, A.5.24–5.26 | CC7.2–CC7.5 |
 | 5 | HKS-BR-06 | Ransomware-resilient backup, recovery & data protection | A.8.13, A.8.24, A.5.29–5.30 | A1.2, A1.3, CC9.1 |
 
 Considered and not selected:
@@ -264,7 +264,23 @@ Each control follows the required chain of six stages. Implementations reference
 
 *The quarterly review should demonstrate oversight, not discover stale access.*
 
-### 7.3 HKS-VM-03 — Vulnerability & configuration management
+### 7.3 HKS-CM-02 — Secure change & CI/CD pipeline integrity
+
+**Risk.** Unreviewed change is self-inflicted breach: one misconfigured bucket exposes data instantly, compromised build tooling turns the pipeline itself into the attack vector, leaked secrets grant standing access. The CI/CD pipeline is now the shortest path to production, and the only place a preventive gate touches every change at near-zero marginal cost.
+
+**Control.** Changes to software, infrastructure and procedures follow a controlled lifecycle of authorisation, independent review, automated testing, approval, segregation of duties and rollback capability, with verifiable provenance over build inputs and outputs. Annex A: A.8.25, A.8.28, A.8.29, A.8.31, A.8.32. TSC: CC8.1, CC6.8.
+
+**Implementation.** Git-centric flow: protected main branches, mandatory peer review, CODEOWNERS review required on security-sensitive paths, stale approvals dismissed so a re-run after changes cannot ride an old sign-off, status checks required, bypass permissions restricted. Short-lived federated pipeline credentials via OIDC rather than stored production keys. CI gates: secret scanning, SAST, SCA, dependency review, IaC scanning. Dependency pinning, SBOM generation, artifact signing verified at deploy admission. Environment separation with restricted production write; emergency changes get documented retro-review within 48 hours. NIST's SSDF frames this correctly: high-level practices integrated into whatever SDLC model exists, with the toolset chosen by risk and environment, not an SBOM-as-proof-of-safety claim.
+
+**Evidence.** Branch-protection and ruleset configuration, merge requests with reviewer identities, CI history including failed gates, SBOMs linked to release identifiers, provenance attestations, deployment approvals, emergency-change tickets. The strongest artefact is again a reconciliation: deployments observed in CloudTrail versus merged approved PRs, where unmatched deployments become investigated exceptions.
+
+**Testing.** Auditor samples deployments from the release log and traces each back through review, green pipeline and approval. Negative tests in a non-production pipeline: plant a deliberately leaked secret, vulnerable dependency, insecure IaC rule, self-approved change or unsigned artifact and confirm the expected gate blocks it. Attempt direct production push in a test repo to confirm branch protection. Review the emergency-change rate for abuse.
+
+**Automation.** The pipeline generates its own evidence: every commit yields immutable proof of review, tests and approval. Policy-as-code evaluates rules like "no security group open to 0.0.0.0/0 on port 22" at deploy admission, blocking noncompliant infrastructure before it exists. Automated reconciliation flags out-of-band changes. Auto-generated remediation PRs go to human review; material production changes are never changed silently.
+
+*A gate that samples only pull requests that already passed tests compliance, not completeness. Reconcile deployments against approvals.*
+
+### 7.4 HKS-VM-03 — Vulnerability & configuration management
 
 **Risk.** Exploitation of known vulnerabilities is now the top initial-access vector at 31% of breaches per the DBIR analyses. Insecure defaults, exposed services, vulnerable dependencies and silent configuration drift compound exposure. A programme can also create false assurance by measuring remediation performance without measuring whether the asset population is fully covered.
 
@@ -280,7 +296,7 @@ Each control follows the required chain of six stages. Implementations reference
 
 *Coverage is a first-class metric. A high percentage remediated within SLA means nothing if part of the estate is invisible.*
 
-### 7.4 HKS-LM-04 — Centralised logging, monitoring & incident response
+### 7.5 HKS-LM-04 — Centralised logging, monitoring & incident response
 
 **Risk.** Breaches dwell undetected for weeks when nobody watches telemetry, multiplying impact through lateral movement, exfiltration and late-notification penalties. Beyond detection, logs are the substrate for every other control's evidence: without trustworthy logs nothing else in this section can be proved to have operated. Attackers who can delete local logs erase their own trail.
 
@@ -295,22 +311,6 @@ Each control follows the required chain of six stages. Implementations reference
 **Automation.** SOAR playbooks for containment speed (auto-isolate endpoint, revoke sessions) gated behind strong authorisation, rollback paths and human escalation. Collection-health checks, anomaly detection, alert routing, case creation and evidence packaging run continuously, turning the annual evidence pull into a query. A failing health check is an alert, never a silent artefact.
 
 *Logging is the load-bearing wall: the evidence for every other control depends on it.*
-
-### 7.5 HKS-CM-02 — Secure change & CI/CD pipeline integrity
-
-**Risk.** Unreviewed change is self-inflicted breach: one misconfigured bucket exposes data instantly, compromised build tooling turns the pipeline itself into the attack vector, leaked secrets grant standing access. The CI/CD pipeline is now the shortest path to production, and the only place a preventive gate touches every change at near-zero marginal cost.
-
-**Control.** Changes to software, infrastructure and procedures follow a controlled lifecycle of authorisation, independent review, automated testing, approval, segregation of duties and rollback capability, with verifiable provenance over build inputs and outputs. Annex A: A.8.25, A.8.28, A.8.29, A.8.31, A.8.32. TSC: CC8.1, CC6.8.
-
-**Implementation.** Git-centric flow: protected main branches, mandatory peer review, CODEOWNERS review required on security-sensitive paths, stale approvals dismissed so a re-run after changes cannot ride an old sign-off, status checks required, bypass permissions restricted. Short-lived federated pipeline credentials via OIDC rather than stored production keys. CI gates: secret scanning, SAST, SCA, dependency review, IaC scanning. Dependency pinning, SBOM generation, artifact signing verified at deploy admission. Environment separation with restricted production write; emergency changes get documented retro-review within 48 hours. NIST's SSDF frames this correctly: high-level practices integrated into whatever SDLC model exists, with the toolset chosen by risk and environment, not an SBOM-as-proof-of-safety claim.
-
-**Evidence.** Branch-protection and ruleset configuration, merge requests with reviewer identities, CI history including failed gates, SBOMs linked to release identifiers, provenance attestations, deployment approvals, emergency-change tickets. The strongest artefact is again a reconciliation: deployments observed in CloudTrail versus merged approved PRs, where unmatched deployments become investigated exceptions.
-
-**Testing.** Auditor samples deployments from the release log and traces each back through review, green pipeline and approval. Negative tests in a non-production pipeline: plant a deliberately leaked secret, vulnerable dependency, insecure IaC rule, self-approved change or unsigned artifact and confirm the expected gate blocks it. Attempt direct production push in a test repo to confirm branch protection. Review the emergency-change rate for abuse.
-
-**Automation.** The pipeline generates its own evidence: every commit yields immutable proof of review, tests and approval. Policy-as-code evaluates rules like "no security group open to 0.0.0.0/0 on port 22" at deploy admission, blocking noncompliant infrastructure before it exists. Automated reconciliation flags out-of-band changes. Auto-generated remediation PRs go to human review; material production changes are never changed silently.
-
-*A gate that samples only pull requests that already passed tests compliance, not completeness. Reconcile deployments against approvals.*
 
 ### 7.6 HKS-BR-06 — Ransomware-resilient backup, recovery & data protection
 
