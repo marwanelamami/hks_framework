@@ -41,5 +41,5 @@ hks_framework/
    - `HKS-CM-02`: Secure change & CI/CD pipeline integrity (multi-party reviews, SLSA)
    - `HKS-VM-03`: Vulnerability & configuration management (EPSS/KEV triage, CSPM)
    - `HKS-LM-04`: Centralized logging, monitoring & incident response (WORM logs, SIEM/SOAR)
-   - `HKS-BR-06`: Ransomware-resilient backup, recovery & data protection (isolated KMS, immutable storage)
+   - `HKS-BR-05`: Ransomware-resilient backup, recovery & data protection (isolated KMS, immutable storage)
 3. **AI & Automation**: Proposed *Evidence Sufficiency Reviewer* for continuous compliance validation.

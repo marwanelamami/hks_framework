@@ -200,7 +200,7 @@ Mnemonic for the spine: **Lock it (identity), Change it safely (pipeline), Patch
 | 2 | HKS-CM-02 | Secure change & CI/CD pipeline integrity | A.8.25, A.8.28–8.32 | CC8.1, CC6.8 |
 | 3 | HKS-VM-03 | Vulnerability & configuration management | A.8.8, A.8.9, A.8.19, A.5.7 | CC7.1, CC8.1 |
 | 4 | HKS-LM-04 | Centralised logging, monitoring & incident response | A.8.15–8.17, A.5.24–5.26 | CC7.2–CC7.5 |
-| 5 | HKS-BR-06 | Ransomware-resilient backup & recovery verification | A.8.13, A.5.29–5.30 | A1.2, A1.3, CC9.1 |
+| 5 | HKS-BR-05 | Ransomware-resilient backup & recovery verification | A.8.13, A.5.29–5.30 | A1.2, A1.3, CC9.1 |
 
 Considered and not selected: **encryption & key management** (strong preventive control, maps to A.8.24/CC6.1/C-series — recommended as the sixth implementation priority; it lost slot five because it constrains disclosure while recovery constrains existence); **awareness & training** (A.6.3/CC1.4 — genuinely reduces the phishing surface the DBIR quantifies, but its evidence is completion data and simulation statistics rather than system-of-record proof, making it the hardest of the candidates to automate; recommended for immediate adoption alongside, not instead of, the five).
 
@@ -262,7 +262,7 @@ Each control follows the required chain. Implementations reference AWS/GitHub as
 
 **Automation.** SOAR playbooks for containment speed (auto-isolate endpoint, revoke sessions) — high-impact actions gated behind strong authorisation, rollback paths and human escalation. SIEM exports coverage and MTTD/MTTR metrics continuously, turning the annual evidence pull into a query. A failing health check is an alert, not a silent artefact.
 
-### 7.6 HKS-BR-06 — Ransomware-resilient backup & recovery verification
+### 7.6 HKS-BR-05 — Ransomware-resilient backup & recovery verification
 
 **Risk.** Ransomware reached 48% of breaches (DBIR 2026). Encryption of data, destructive deletion, compromise of backup credentials themselves, prolonged outage, inability to restore trustworthy services. Backups that exist but have never been restored are a hope, not a control.
 

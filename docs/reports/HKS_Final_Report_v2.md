@@ -239,11 +239,11 @@ Mnemonic for the spine: **Lock it** (identity) · **Change it safely** (pipeline
 | 2 | HKS-CM-02 | Secure change & CI/CD pipeline integrity | A.8.25, A.8.28–8.32 | CC8.1, CC6.8 |
 | 3 | HKS-VM-03 | Vulnerability & configuration management | A.8.8, A.8.9, A.8.19, A.5.7 | CC7.1, CC8.1 |
 | 4 | HKS-LM-04 | Centralised logging, monitoring & incident response | A.8.15–8.17, A.5.24–5.26 | CC7.2–CC7.5 |
-| 5 | HKS-BR-06 | Ransomware-resilient backup, recovery & data protection | A.8.13, A.8.24, A.5.29–5.30 | A1.2, A1.3, CC9.1 |
+| 5 | HKS-BR-05 | Ransomware-resilient backup, recovery & data protection | A.8.13, A.8.24, A.5.29–5.30 | A1.2, A1.3, CC9.1 |
 
 Considered and not selected:
 
-- **Encryption & key management.** A strong preventive control mapping to A.8.24/CC6.1/C-series. It lost slot five because it limits disclosure while recovery limits existence; it survives intact inside HKS-BR-06 as encryption-at-rest, secure transport, and separation of key administration from key use.
+- **Encryption & key management.** A strong preventive control mapping to A.8.24/CC6.1/C-series. It lost slot five because it limits disclosure while recovery limits existence; it survives intact inside HKS-BR-05 as encryption-at-rest, secure transport, and separation of key administration from key use.
 - **Awareness & training.** Genuinely reduces the phishing surface the DBIR quantifies, and we recommend adopting it alongside the five. Its evidence is completion data and simulation statistics rather than system-of-record proof, which makes it the hardest of the three candidates to automate or test with negative cases.
 
 Each control follows the required chain of six stages. Implementations reference AWS/GitHub services as concrete anchors; these are patterns, not endorsements, and map to Azure/GitLab equivalents.
@@ -312,7 +312,7 @@ Each control follows the required chain of six stages. Implementations reference
 
 *Logging is the load-bearing wall: the evidence for every other control depends on it.*
 
-### 7.6 HKS-BR-06 — Ransomware-resilient backup, recovery & data protection
+### 7.6 HKS-BR-05 — Ransomware-resilient backup, recovery & data protection
 
 **Risk.** Ransomware reached 48% of breaches per the DBIR analyses. Destructive deletion, compromised backup credentials, accidental loss and prolonged outage can all make trustworthy restoration impossible. Unprotected copies create their own exposure: stolen backups leak what production protects. Backups that exist but have never been restored are a hope, not a control.
 
@@ -388,7 +388,7 @@ All three individual reports proposed an AI system for evidence work, and their 
 
 Recorded because the brief grades reasoning, not just conclusions:
 
-1. **Fifth control.** Encryption vs backup/recovery vs awareness. Resolved on DBIR attack data toward backup & recovery, with encryption folded into HKS-BR-06 and awareness kept alongside; full reasoning in section 7.1.
+1. **Fifth control.** Encryption vs backup/recovery vs awareness. Resolved on DBIR attack data toward backup & recovery, with encryption folded into HKS-BR-05 and awareness kept alongside; full reasoning in section 7.1.
 2. **"80% overlap" between frameworks.** Rejected as a claim to repeat. It is unfalsifiable as usually stated and measures the wrong thing: control activities overlap heavily, the evidence workload does not.
 3. **Type II period norms.** Vendor sources imply fixed rules ("six months minimum", "always twelve"). Resolved to Elkorbow's formulation: the period is agreed between management and the CPA firm; ranges are practitioner convention, not rule.
 4. **Asset inventory: "control zero" or a control?** Held open deliberately. Our position treats inventory as a precondition with completeness enforced inside each control's testing through reconciliations, rather than standing it up as a standalone sixth control. Counter-arguments welcome in review.
