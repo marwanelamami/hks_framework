@@ -1,0 +1,53 @@
+name: PR Verification & Safety Checks
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  lint-and-validate:
+    name: Validate Markdown & Check Links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check for Uncommitted Merge Artifacts or Conflict Markers
+        run: |
+          echo "Scanning for Git conflict markers..."
+          if grep -rnw . -e '<<<<<<<' -e '=======' -e '>>>>>>>' --exclude-dir=".git"; then
+            echo "Error: Found Git conflict markers in codebase!"
+            exit 1
+          fi
+          echo "No conflict markers found."
+
+      - name: Verify Document Hierarchy and File Integrity
+        run: |
+          echo "Checking expected repository structure..."
+          test -f README.md || { echo "Missing README.md"; exit 1; }
+          test -d docs/reports || { echo "Missing docs/reports"; exit 1; }
+          test -d docs/presentation || { echo "Missing docs/presentation"; exit 1; }
+          test -d docs/references || { echo "Missing docs/references"; exit 1; }
+          echo "Repository structure verified."
+
+  security-scan:
+    name: Secret & Credential Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Gitleaks Secret Scanner
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true

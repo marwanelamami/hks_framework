@@ -1,0 +1,14 @@
+# Global code owner - All files and pull requests require review from @marwanelamami
+* @marwanelamami
+
+# CI/CD Workflows and repository governance
+/.github/ @marwanelamami
+
+# Documentation, reports, standards, and presentation materials
+/docs/ @marwanelamami
+
+# Top-level documentation and configuration
+/README.md @marwanelamami
+/CONTRIBUTING.md @marwanelamami
+/SECURITY.md @marwanelamami
+/.gitignore @marwanelamami
