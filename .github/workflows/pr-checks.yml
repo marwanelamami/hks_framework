@@ -7,22 +7,17 @@ on:
     branches: [ main ]
 
 jobs:
-  lint-and-validate:
-    name: Validate Markdown & Check Links
+  validate-and-scan:
+    name: Validate Structure & Security Scan
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Check for Uncommitted Merge Artifacts or Conflict Markers
+      - name: Check for Git Conflict Markers
         run: |
           echo "Scanning for Git conflict markers..."
-          if grep -rnw . -e '<<<<<<<' -e '=======' -e '>>>>>>>' --exclude-dir=".git"; then
+          if grep -rnE '^[<]{7} |^[=]{7}$|^[>]{7} ' . --exclude-dir=".git" --exclude-dir=".github"; then
             echo "Error: Found Git conflict markers in codebase!"
             exit 1
           fi
@@ -37,17 +32,11 @@ jobs:
           test -d docs/references || { echo "Missing docs/references"; exit 1; }
           echo "Repository structure verified."
 
-  security-scan:
-    name: Secret & Credential Scan
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Run Gitleaks Secret Scanner
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        continue-on-error: true
+      - name: Scan for Exposed Credentials and Private Keys
+        run: |
+          echo "Scanning for exposed credentials..."
+          if grep -rnE 'BEGIN (RSA|EC|DSA|OPENSSH) PRIVATE KEY|AKIA[0-9A-Z]{16}' . --exclude-dir=".git" --exclude-dir=".github"; then
+            echo "Error: Potential private key or credential found!"
+            exit 1
+          fi
+          echo "No exposed credentials detected."
